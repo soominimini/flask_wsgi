@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" id="form_id" method="post">
+    ID를 입력해 주세요
+    <textarea  name="txtid" id="textID" cols="20" rows="1"></textarea>
+    비밀번호를 입력해 주세요
+    <textarea  name="txtpassword" id="textPassword" cols="20" rows="1"></textarea>
+    SNS 아이디를 입력해 주세요
+	<textarea  name="txtsns" id="textSNS" cols="20" rows="1"></textarea>
+	<input type="button"  name="submit_id" id="btn" value="전송" onclick="postFunc()"/>
+
+</form>
+<script type="text/javascript">
+
+   function validation() {
+       var strText = document.getElementById("textSNS").value;
+       if (strText == '') {
+           alert("다음 페이지로 넘어가기 위해서는 먼저 문자를 입력하셔야 합니다.");
+           return false;
+       } else {
+           return true;
+       }
+   }
+
+   function postFunc() {
+       if (validation()) // Calling validation function
+        {
+            document.getElementById("form_id").submit(); //form submission
+            alert("다음 검사 페이지로 이동합니다.");
+        }
+        }
+</script>
+</body>
+</html>
