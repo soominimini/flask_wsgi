@@ -22,7 +22,7 @@ from sqlalchemy import Column, Integer, String
 from werkzeug.utils import secure_filename
 
 url = 'https://gateway.watsonplatform.net/personality-insights/api'
-apikey = '9aPTQUgHwV74s4gjD7zC4ZsCppop7j1-gNheGmW8S6UA'
+apikey = 
 service = PersonalityInsightsV3(url=url, iam_apikey=apikey, version='2017-10-13')
 
 app = Flask(__name__)
